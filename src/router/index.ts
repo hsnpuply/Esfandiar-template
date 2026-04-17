@@ -16,6 +16,8 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  // Temporarily disabling auth guards as requested
+  /*
   const authStore = useAuthStore()
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
 
@@ -26,6 +28,9 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
+  */
+  
+  next()
 })
 
 export default router
