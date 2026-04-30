@@ -1,16 +1,14 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import App from './App.vue'
-import router from './router'
-import { setupEcharts } from './plugins/echarts'
-import './index.css'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import App from './App.vue';
+import router from './app/router';
+import { registerAppProviders } from './app/providers';
+import './index.css';
 
-const app = createApp(App)
-const pinia = createPinia()
+const app = createApp(App);
 
-app.use(pinia)
-app.use(router)
+app.use(createPinia());
+app.use(router);
+registerAppProviders(app);
 
-setupEcharts(app)
-
-app.mount('#root')
+app.mount('#app');

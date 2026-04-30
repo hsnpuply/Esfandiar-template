@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Vue 3 Starter Kit (Feature-Based)
 
-# Run and deploy your AI Studio app
+A clean starter template based on:
 
-This contains everything you need to run your app locally.
+- Vue 3 + Composition API + TypeScript
+- Vite
+- Tailwind CSS
+- Vue Router
+- Pinia
+- PrimeVue + PrimeIcons + PrimeVue theme system
+- Jalali/Persian date support via `jalali-moment`
+- Persian date picker via `vue3-persian-datetime-picker`
 
-View your app in AI Studio: https://ai.studio/apps/b56cc59e-527a-4629-88cd-bd1a938f68f0
+## Project Structure
 
-## Run Locally
+```txt
+src/
+  app/
+    layouts/
+    providers/
+    router/
+  features/
+    auth/
+    dashboard/
+  shared/
+    utils/
+```
 
-**Prerequisites:**  Node.js
+## Start
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
